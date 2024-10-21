@@ -5,6 +5,7 @@ SECTION #1 (21/10) - Exploratory Analysis
   -Visual Data Mining with common MDP. Further reading:
 Ortigossa, E.S., Dias, F.F., & Nascimento, D.C. (2022). Getting over high-dimensionality: how multidimensional projection methods can assist data science. Applied Sciences, 12(13), 6799.
 
+DATA SOURCE: WINE - https://doi.org/10.24432/C5PC7J   |   ENERGY - https://doi.org/10.24432/C51307 
 
 SECTION #2 (22/10) - Intro to Clustering in Data Modeling
 
