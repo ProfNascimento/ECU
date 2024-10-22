@@ -1,5 +1,11 @@
-require(mp)
-require(tidyverse)
+## INSTALL PACKAGES
+install.packages(c('mp','tidyverse',
+                   'skimr','GGally',
+                   'ggcorrplot','vegan',
+                   'umap','ProjectionBasedClustering'))
+
+library(mp)
+library(tidyverse)
 
 ## DATA IMPORT
 DB <- read.csv("https://raw.githubusercontent.com/ProfNascimento/ECU/refs/heads/main/wine.csv")
@@ -14,8 +20,13 @@ skim_summ(DB)
 library(GGally)
 ggpairs(DB)
 
+## WITHOUT LOADING R PACKAGE INTO THE RAM
+## GGally::ggpairs(DB)
+
+## CALCULATE STANDARD DEVIATION PER FEATURE
+apply(DB[,-1],2,sd)
+
 ## CORRELATION
-apply(DB[,-1],2,sd) # Tl sd=0
 corr <- round(cor(DB[,-1]), 1)
 ggcorrplot::ggcorrplot(corr)
 
